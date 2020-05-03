@@ -1,10 +1,12 @@
 import React,{Component} from 'react';
 // eslint-disable-next-line
-import { Navbar, NavbarBrand} from 'reactstrap';
 import Menu from './menucomponent';
 import {DISHES} from '../shared/dishes';
 import DishdetailComponent from './DishdetailComponent'; 
-
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import Home from './HomeComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 export default class Main extends Component {
   constructor(props){
@@ -13,14 +15,14 @@ export default class Main extends Component {
     
     this.state={
       dishes: DISHES,
-      selectedDish: null
+//      selectedDish: null
     }
 
   }
-    onDishSelect(dishID){
-    this.setState({
-        selectedDish: dishID
-    })};
+    // onDishSelect(dishID){
+    // this.setState({
+    //     selectedDish: dishID
+    // })};
 
     renderComments(dishsel){
         
@@ -70,20 +72,33 @@ export default class Main extends Component {
 
 
   render() {
+
+    const HomePage = () => {
+      return(
+
+        <div>
+          <Home/>
+        </div>
+
+      );
+    }
     return (
       <div className="App">
-          <Navbar dark color="primary">
-            <div className="container">
-              <NavbarBrand href="/">BaIG RESTAURANT</NavbarBrand>
-            </div>
-          </Navbar>
-            <Menu dishes={this.state.dishes} onClick = {(dishID) => {this.onDishSelect(dishID)}}/>
-          <div className="container">
-              <div className="row">
-                {this.renderDish(this.state.selectedDish)}
-                {this.renderComments(this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0])}
-              </div>
-          </div>
+            <Header />
+              <Switch>
+                <Route path="/home" component={HomePage} />
+                <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />} />
+                <Redirect to="/home" />
+              </Switch>
+              {/* <Menu dishes={this.state.dishes} onClick = {(dishID) => {this.onDishSelect(dishID)}}/>
+                
+                <div className="container">
+                    <div className="row">
+                      {this.renderDish(this.state.selectedDish)}
+                      {this.renderComments(this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0])}
+                    </div>
+                </div> */}
+            <Footer />
       </div>
     );
   }
