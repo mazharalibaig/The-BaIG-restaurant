@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       
       <BrowserRouter>
-        <div>
+        <div className="boss">
           <Main />
         </div>
       </BrowserRouter>
