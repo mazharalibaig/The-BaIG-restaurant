@@ -1,5 +1,7 @@
 import React from 'react';
 import {CardImg,Card,CardTitle,CardBody,CardText} from 'reactstrap';
+// import {Link} from 'react-router-dom';
+// import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
 
     const DishdetailComponent = (props) => {
         if(props.dish!=null){

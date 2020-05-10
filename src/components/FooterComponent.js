@@ -12,7 +12,7 @@ function Footer(props) {
                         {/* eslint-disable-next-line */}
                         <li><Link to="/home">Home</Link></li>
                         {/* eslint-disable-next-line */}
-                        <li><Link to="/">About</Link></li>
+                        <li><Link to="/aboutus">About</Link></li>
                          {/* eslint-disable-next-line */}
                         <li><Link to="/menu">Menu</Link></li>
                          {/* eslint-disable-next-line */}
