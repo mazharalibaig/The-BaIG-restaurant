@@ -46,13 +46,13 @@ export default class Header extends Component {
         return (
             <>
                 <Navbar dark expand="md" >
-                    <div className="container">
+                    <Nav className="ml-5">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/" alt="BaIG Restaurant" > 
                             {/* eslint-disable-next-line */}
                             <img src='assets/images/logo.png' width="70" height="50" />
                         </NavbarBrand>
-                    </div>
+                    </Nav>
                     <Nav navbar>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <NavItem>
