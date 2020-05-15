@@ -2,18 +2,22 @@ import React from 'react';
 // eslint-disable-next-line 
 import {CardImg,CardImgOverlay,Card,CardTitle,CardBody,CardText, Breadcrumb, BreadcrumbItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line 
+import DishdetailComponent from './DishdetailComponent';
 
- function RenderMenuItem({dish,onClick})
+ function RenderMenuItem({dish})
     {
+        
         return(
-            <Card onClick={()=>{onClick(dish.id)}}>
-                <Link to={`/menu/${dish.id}`}>
+            <Link to={`/menu/${dish.id}`}>
+                <Card>
                     <CardImg width="100%" src={dish.image} alt={dish.name} />
                     <CardImgOverlay>
                     <CardTitle>{dish.name}</CardTitle>
                     </CardImgOverlay>                
-                </Link>
-            </Card>
+                </Card>
+            </Link>
+
         );
     }
     const Menu = (props) => {

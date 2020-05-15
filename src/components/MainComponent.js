@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 // eslint-disable-next-line
 import Menu from './menucomponent';
-import DishdetailComponent from './DishdetailComponent'; 
+import DishdetailComponent from './DishdetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -13,32 +13,31 @@ import {connect} from 'react-redux';
     const mapStateToProps = (state) => {
 
         return{
-          
+
             dishes: state.dishes,
             leaders: state.leaders,
             comments: state.comments,
-            promotions: state.promotions 
+            promotions: state.promotions
 
         }
 
     }
-  
+
+
 
  class Main extends Component {
-  
+
   // eslint-disable-next-line
   constructor(props){
-    
+
     super(props);
 
   }
 
     renderComments(dishsel){
-        
+
         if( dishsel != null )
         {
-            console.log("Comments");
-            console.log(dishsel);
             const items = dishsel.comments.map((p,index) => {
             return(
                     <li key={index}>
@@ -60,10 +59,10 @@ import {connect} from 'react-redux';
         {
             return(<div></div>);
         }
-  
+
     }
   renderDish(dish){
-      
+
       if( dish != null )
       {
           return(
@@ -77,7 +76,6 @@ import {connect} from 'react-redux';
           return(<div></div>);
       }
   }
-
 
 
   render() {
@@ -96,13 +94,29 @@ import {connect} from 'react-redux';
       );
     }
 
+    // const DishWithId = ({ match }) => {
+    //   return (
+    //     <DishDetail
+    //       dish={
+    //         this.props.dishes.filter(
+    //           dish => dish.id === parseInt(match.params.dishId, 10)
+    //         )[0]
+    //       }
+    //       comments={this.props.comments.filter(
+    //         comment => comment.dishId === parseInt(match.params.dishId, 10)
+    //       )}
+    //     />
+    //   );
+    // };
+
     const DishWithID = ({match}) => {
 
         return(
-          <DishdetailComponent dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishID,10)[0])}
-                               comments={this.props.comments.filter((comment) => comment.id === parseInt(match.params.dishID,10)[0])}
+          <DishdetailComponent dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishID,10))[0]}
+                               comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishID,10))}
           />
         );
+
     }
 
     return (
@@ -111,9 +125,9 @@ import {connect} from 'react-redux';
               <Switch>
                 <Route path="/home" component={HomePage} />
                 <Route exact path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
-                <Route path="/menu/:dishID" component={DishWithID} />
+                <Route path="/menu/:dishID" component={DishWithID}/>
                 <Route path="/aboutus" component={() => <About leaders={this.props.leaders}/>} />
-                <Route exact path="/contactus" component={Contact} />        
+                <Route exact path="/contactus" component={Contact} />
                 <Redirect to="/home" />
               </Switch>
             <Footer />

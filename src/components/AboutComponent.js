@@ -6,7 +6,6 @@ function About(props) {
 
     const RenderLeader = ({leader}) => {
 
-        console.log(leader);
         
         return(
             
