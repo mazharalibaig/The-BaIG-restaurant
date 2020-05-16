@@ -41,8 +41,12 @@ class CommentForm extends Component {
   handleSubmit(values)
     {
         console.log("Current state"+ JSON.stringify(values));
-        alert("Current state"+ JSON.stringify(values));
-        this.setState({isModalOpen: !this.state.isModalOpen});
+        console.log(this.props.dishID);
+        console.log(values.rating);
+        console.log(values.author);
+        console.log(values.comment);
+        this.toggleModal();
+        this.props.addComment(this.props.dishID, values.rating,values.author,values.comment);
     }
 
   render() {
@@ -72,14 +76,14 @@ class CommentForm extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label forHtml="name" md={3}>Your Name : </Label>
+                <Label forHtml="author" md={3}>Your Name : </Label>
                 <Col md={12}>
-                  <Control.text model=".name" name="name" className="form-control" validators={{required,maxlength:maxlength(10),minlength:minlength(3)}} />
+                  <Control.text model=".author" name="author" className="form-control" validators={{required,maxlength:maxlength(15),minlength:minlength(3)}} />
                   <Errors 
-                    model=".name"
+                    model=".author"
                     show="touched"
                     className="text-danger"
-                    messages={{required: "Please enter your name",maxlength: "Name must not be lesser than 10 characters",minlength: "Name must be longer than 3 characters"}}
+                    messages={{required: "Please enter your name",maxlength: "Name must not be lesser than 15 characters",minlength: "Name must be longer than 3 characters"}}
                   />
                 </Col>
               </Row>
@@ -118,17 +122,21 @@ function RenderDish({ dish }) {
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
-        </CardBody>
+        </CardBody> 
       </Card>
     </div>
   );
 }
 
-function RenderComments({ comments }) {
+function RenderComments({ comments,addComment,dishID }) {
   if (comments != null) {
     return (
       <div className="col-12 col-md-5 m-1">
         <h4>Comments</h4>
+        {console.log("All comms")
+        }
+        {console.log(comments)
+        }
         {comments.map(comment => (
           <ul key={comment.id} className="list-unstyled">
               {console.log(comment)}
@@ -143,7 +151,10 @@ function RenderComments({ comments }) {
             </li>
           </ul>
         ))}
-        <CommentForm />
+        <CommentForm 
+          addComment={addComment}
+          dishID={dishID}
+        />
       </div>
     );
   } else return <div />;
@@ -165,7 +176,11 @@ const DishDetailComponent = props => (
     </div>
     <div className="row">
       <RenderDish dish={props.dish} />
-      <RenderComments comments={props.comments} />
+      <RenderComments 
+        comments={props.comments}
+        addComment = {props.addComment}
+        dishID = {props.dish.id}
+      />
     </div>
   </div>
 );

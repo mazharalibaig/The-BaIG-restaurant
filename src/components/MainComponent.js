@@ -9,6 +9,7 @@ import About from './AboutComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect,withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
+import {addComment} from '../redux/ActionCreators';
 
     const mapStateToProps = (state) => {
 
@@ -22,17 +23,13 @@ import {connect} from 'react-redux';
         }
 
     }
-
-
-
+    const mapDispatchToProps = (dispatch) => 
+    (
+      {
+          addComment: (dishID,rating,author,comment) => dispatch(addComment(dishID,rating,author,comment))
+      }
+    );
  class Main extends Component {
-
-  // eslint-disable-next-line
-  constructor(props){
-
-    super(props);
-
-  }
 
     renderComments(dishsel){
 
@@ -94,26 +91,16 @@ import {connect} from 'react-redux';
       );
     }
 
-    // const DishWithId = ({ match }) => {
-    //   return (
-    //     <DishDetail
-    //       dish={
-    //         this.props.dishes.filter(
-    //           dish => dish.id === parseInt(match.params.dishId, 10)
-    //         )[0]
-    //       }
-    //       comments={this.props.comments.filter(
-    //         comment => comment.dishId === parseInt(match.params.dishId, 10)
-    //       )}
-    //     />
-    //   );
-    // };
-
     const DishWithID = ({match}) => {
 
+        console.log("latest");
+        
+        console.log(this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishID,10)));
+        
         return(
           <DishdetailComponent dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishID,10))[0]}
                                comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishID,10))}
+                               addComment = {this.props.addComment}
           />
         );
 
@@ -136,4 +123,4 @@ import {connect} from 'react-redux';
   }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Main));
