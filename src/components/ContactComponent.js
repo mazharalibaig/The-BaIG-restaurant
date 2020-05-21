@@ -3,6 +3,7 @@ import {Breadcrumb,BreadcrumbItem} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { Label, Button ,Row} from 'reactstrap';
 import { Col} from 'react-bootstrap';
+// eslint-disable-next-line
 import { Control,Form,Errors,actions } from 'react-redux-form';
 
 const required = (val) => val&&val.length;
