@@ -3,7 +3,7 @@ import {Dishes} from './dishes.js';
 import {Comments} from './comments.js';
 import {Leaders} from './leaders.js';
 import {Promotions} from './promotions.js';
-import thunk from 'redux-thunk';
+import thunk from "redux-thunk";
 import logger from 'redux-logger';
 import {createForms} from 'react-redux-form';
 import { InitialFeedback } from './forms.js';

@@ -8,6 +8,15 @@ function Home (props){
 
     function RenderCard({item, isLoading , errMess}){
 
+        // console.log("item");
+        // console.log(item);
+        // console.log("isLoading");
+        // console.log(isLoading);
+        // console.log("errMess");
+        // console.log(errMess);
+        
+        
+        
         if(isLoading)
         {
             return(
@@ -47,9 +56,6 @@ function Home (props){
         }
 
     }
-    if(props.dish!=null)
-    {
-        
         return(
             <div className="container">
                 <div className="row align-items-start">
@@ -77,8 +83,5 @@ function Home (props){
     
         );
     }
-    else 
-    return <div></div>;
-}
 
 export default Home;

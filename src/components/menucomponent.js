@@ -42,14 +42,15 @@ import { baseUrl } from '../shared/baseUrl';
           }
           else if(props.dishes.errMess)
           {
+            console.log("Failed bruh");
+            console.log(props.errMess);
+            
               return(
-        
                 <div className="container">
                   <div className="row">
                     <h4>{props.errMess}</h4>
                   </div>
                 </div>
-        
               );
           }
           else
@@ -71,6 +72,6 @@ import { baseUrl } from '../shared/baseUrl';
                         </div>
                     </div>
                 );
-        }
+          }
     }
 export default Menu;
