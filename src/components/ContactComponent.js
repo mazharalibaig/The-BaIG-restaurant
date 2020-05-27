@@ -3,8 +3,7 @@ import {Breadcrumb,BreadcrumbItem} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { Label, Button ,Row} from 'reactstrap';
 import { Col} from 'react-bootstrap';
-// eslint-disable-next-line
-import { Control,Form,Errors,actions } from 'react-redux-form';
+import { Control,Form,Errors} from 'react-redux-form';
 
 const required = (val) => val&&val.length;
 const maxlength = (len) => (val) => !(val) || (val.length<=len);
@@ -28,6 +27,7 @@ class Contact extends Component{
         console.log("Current state"+ JSON.stringify(values));
         alert("Current state"+ JSON.stringify(values));
         this.props.resetFeedbackForm();
+        this.props.postFeedback(values.firstname,values.lastname,values.telnum,values.email,values.contactType,values.agree,values.message);
         
     }
     render()
