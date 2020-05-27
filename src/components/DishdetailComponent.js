@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal,ModalBody,Card,CardImg,Col,CardText,CardBody,CardTitle,Breadcrumb,BreadcrumbItem, Button, ModalHeader, Row, Label} from "reactstrap";
+import { Modal,ModalBody,Card,CardImg,Col,CardText,CardBody,Breadcrumb,BreadcrumbItem, Button, ModalHeader, Row, Label} from "reactstrap";
 import { Link } from "react-router-dom";
 import { Component } from 'react'
 import { LocalForm, Control, Errors } from 'react-redux-form';
@@ -120,9 +120,9 @@ function RenderDish({ dish }) {
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }}>
           <Card>
-            <CardImg top src={ baseUrl + dish.image} alt={dish.name} />
+            <CardImg top src={ baseUrl + dish.image}  />
             <CardBody>
-              <CardTitle>{dish.name}</CardTitle>
+              {/* <CardTitle>{dish.name}</CardTitle> */}
               <CardText>{dish.description}</CardText>
             </CardBody> 
           </Card>
