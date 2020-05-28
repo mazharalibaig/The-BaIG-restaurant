@@ -1,4 +1,4 @@
-This is a Menu App for a restaurant built completely using HTML,CSS,JS,Bootstrap,React and Redux (state management). 
+This is a Menu App for a restaurant built completely using HTML,CSS,JS,Bootstrap,Fetch,React,Redux(state management). 
 Features are shown in screenshots that follow.
 
 ## How to Run
@@ -22,6 +22,39 @@ i.e enter menuapp folder again
 Then click on the local host link to run
 
 ## Screenshots
+
+**HomePage**: ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-13-56.png)
+
+**Login**: ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-19-13.png)
+
+**Login after fill up**: ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-19-33.png)
+
+**About Us** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-14-14.png)
+
+**Corporate Leaders** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-14-20.png)
+
+**Menu Overview** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2018-07-14.png)
+
+**Dish Details** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-14-37.png)
+
+**Dish Comments Submission Form** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-15-22.png)
+
+**Dish Comments Submitted** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-15-35.png)
+
+**Contact Us** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-15-46.png)
+
+**FeedBack Form** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-15-48.png)
+
+**FeedBack Form Validation** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-16-58.png) ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-18-05.png)
+
+**FeedBack Alert** ![](React%20menu%20app%20images/Screenshot%20from%202020-05-28%2017-15-48.png)
+
+
+
+
+
+
+
 
 
 
