@@ -1,4 +1,5 @@
 {
+  "homepage": "http://mazharalibaig.github.io/The-BaIG-restaurant",
   "name": "menuapp",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,7 @@
     "bootstrap-social": "5.1.1",
     "cross-fetch": "2.1.0",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^2.2.0",
     "prop-types": "15.6.0",
     "react": "^16.13.1",
     "react-animation-components": "^3.0.0",

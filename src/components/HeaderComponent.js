@@ -49,8 +49,8 @@ export default class Header extends Component {
                     <Nav className="ml-5">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/" alt="BaIG Restaurant" > 
-                            {/* eslint-disable-next-line */}
-                            <img src='assets/images/logo.png' width="70" height="50" />
+                            
+                            <img src='assets/images/logo.png' width="70" height="50" alt="Your Logo Here" />
                         </NavbarBrand>
                     </Nav>
                     <Nav navbar>

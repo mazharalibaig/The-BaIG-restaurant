@@ -22,13 +22,15 @@ function Footer(props) {
                 <div className="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		              121, Clear Water Bay Road<br />
-		              Clear Water Bay, Kowloon<br />
-		              HONG KONG<br />
+                        Indian Institute of Information Technology, Design and Manufacturing,
+                        Dumna Airport Road,
+                        Jabalpur,
+                        Madhya Pradesh
+                        <br />
 		              <i className="fa fa-phone fa-lg"></i>: +91 9618070339 <br />
 		              <i className="fa fa-fax fa-lg"></i>: +91 9618070339 <br />
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">
-                         confusion@food.net</a>
+                         mamazharalibaig@gmail.com</a>
                     </address>
                 </div>
                 <div className="col-12 col-sm-4 align-self-center">
@@ -44,7 +46,7 @@ function Footer(props) {
             </div>
             <div className="row justify-content-center">             
                 <div className="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    <p>© Copyright 2018 The BaIG Restaurant</p>
                 </div>
             </div>
         </div>
