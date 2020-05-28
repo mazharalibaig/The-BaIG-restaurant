@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/The-BaIG-restaurant/static/css/main.e1033cc7.chunk.css",
+    "main.js": "/The-BaIG-restaurant/static/js/main.bcac3939.chunk.js",
+    "main.js.map": "/The-BaIG-restaurant/static/js/main.bcac3939.chunk.js.map",
+    "runtime-main.js": "/The-BaIG-restaurant/static/js/runtime-main.e18657cb.js",
+    "runtime-main.js.map": "/The-BaIG-restaurant/static/js/runtime-main.e18657cb.js.map",
+    "static/css/2.4b82c098.chunk.css": "/The-BaIG-restaurant/static/css/2.4b82c098.chunk.css",
+    "static/js/2.72affe92.chunk.js": "/The-BaIG-restaurant/static/js/2.72affe92.chunk.js",
+    "static/js/2.72affe92.chunk.js.map": "/The-BaIG-restaurant/static/js/2.72affe92.chunk.js.map",
+    "index.html": "/The-BaIG-restaurant/index.html",
+    "precache-manifest.e7c4bf3858dd41fdab26027f9ff8c0f7.js": "/The-BaIG-restaurant/precache-manifest.e7c4bf3858dd41fdab26027f9ff8c0f7.js",
+    "service-worker.js": "/The-BaIG-restaurant/service-worker.js",
+    "static/css/2.4b82c098.chunk.css.map": "/The-BaIG-restaurant/static/css/2.4b82c098.chunk.css.map",
+    "static/css/main.e1033cc7.chunk.css.map": "/The-BaIG-restaurant/static/css/main.e1033cc7.chunk.css.map",
+    "static/js/2.72affe92.chunk.js.LICENSE.txt": "/The-BaIG-restaurant/static/js/2.72affe92.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/The-BaIG-restaurant/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e18657cb.js",
+    "static/css/2.4b82c098.chunk.css",
+    "static/js/2.72affe92.chunk.js",
+    "static/css/main.e1033cc7.chunk.css",
+    "static/js/main.bcac3939.chunk.js"
+  ]
+}
