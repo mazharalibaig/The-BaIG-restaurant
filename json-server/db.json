@@ -233,6 +233,14 @@
       "comment": "Tastes as bad as it sounds!\n",
       "date": "2020-05-28T09:57:48.078Z",
       "id": 23
+    },
+    {
+      "dishId": 0,
+      "rating": "4",
+      "author": "Random User",
+      "comment": "Best fusion food I have ever had!!",
+      "date": "2020-05-28T11:45:26.871Z",
+      "id": 24
     }
   ],
   "promotions": [
@@ -310,6 +318,17 @@
       "messagedate": "Kya zabardast website hai bhai",
       "date": "2020-05-27T16:59:23.149Z",
       "id": 3
+    },
+    {
+      "firstname": "ABCDEFGH",
+      "lastname": "ABCDEFGH",
+      "telnum": "1234567891",
+      "email": "xtcyvuio@gmail.com",
+      "agree": "Email",
+      "contactType": true,
+      "messagedate": "random feedback given by user",
+      "date": "2020-05-28T11:48:46.387Z",
+      "id": 4
     }
   ]
 }

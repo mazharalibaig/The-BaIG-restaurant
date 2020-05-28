@@ -1,4 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Menu App for a restaurant built completely using HTML,CSS,JS,Bootstrap,React and Redux (state management). 
+Features are shown in screenshots that follow.
+
+## How to Run
+
+after cloning,
+
+`cd menuapp`
+
+`cd json-server`
+
+*Change port to any other if 3001 is busy*
+
+`json-server db.json --watch -p 3001`
+
+`cd ..`
+
+i.e enter menuapp folder again
+
+`yarn start`
+
+Then click on the local host link to run
+
+## Screenshots
+
+
+
 
 ## Available Scripts
 
