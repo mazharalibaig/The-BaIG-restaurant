@@ -1,6 +1,8 @@
 This is a Menu App for a restaurant built completely using HTML,CSS,JS,Bootstrap,Fetch,React,Redux(state management). 
 Features are shown in screenshots that follow.
 
+https://mazharalibaig.github.io/The-BaIG-restaurant/ (Run json-server after cloning to see all features)
+
 ## How to Run
 
 after cloning,
